@@ -1,11 +1,12 @@
 prerequisites
 
+1)
 https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 
-python
-
+2)
+python,awk
 
 use:
 
