@@ -7,8 +7,9 @@ https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 2) python,awk
 
-setup: add +x to scripts
-  
+setup: 
+  add +x to scripts
+  '''
   chmod u+x setup.sh
   ./setup.sh
 
