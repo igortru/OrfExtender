@@ -11,17 +11,17 @@ use:
 
 ./scripts/ExtendDownStream.sh <acc> max_len letter> row
 
-acc - genbank protein accession
-max_len  - max number of AA can be added downstream
-letter - replace "*" 
-row - row number from NCBI ipg report , default = 2
+    acc - genbank protein accession
+    max_len  - max number of AA can be added downstream
+    letter - replace "*" 
+    row - row number from NCBI ipg report , default = 2
 
 ./scripts/ExtendUpStream.sh  acc max_len letter count
 
-acc - genbank protein accession
-max_len  - max number of AA can be added upstream
-letter - replace "*" 
+    acc - genbank protein accession
+    max_len  - max number of AA can be added upstream
+    letter - replace "*" 
 
 test:
-  awk '{printf "echo %s;./scripts/ExtendDownStream.sh %s 200 U\n",$1,$1;}' ./tests/test.set  | sh
+    awk '{printf "echo %s;./scripts/ExtendDownStream.sh %s 200 U\n",$1,$1;}' ./tests/test.set  | sh
 
