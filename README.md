@@ -9,7 +9,7 @@ https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 use:
 
-./scripts/ExtendDownStream.sh <acc> max_len letter> row
+./scripts/ExtendDownStream.sh acc max_len letter row
 
     acc - genbank protein accession
     max_len  - max number of AA can be added downstream
