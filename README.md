@@ -10,6 +10,7 @@ sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edi
 use:
 
 ./scripts/ExtendDownStream.sh <acc> max_len letter> row
+
 acc - genbank protein accession
 max_len  - max number of AA can be added downstream
 letter - replace "*" 
