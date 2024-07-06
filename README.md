@@ -13,14 +13,14 @@ use:
 
     acc - genbank protein accession
     max_len  - max number of AA can be added downstream
-    letter - replace "*" ,  for example - U
+    letter - replace "*" with "U"
     row - row number from NCBI ipg report , default = 2
 
 ./scripts/ExtendUpStream.sh  acc max_len letter count
 
     acc - genbank protein accession
     max_len  - max number of AA can be added upstream
-    letter - replace "*", for example - U 
+    letter - replace "*" with  "U"
     row - row number from NCBI ipg report , default = 2
 
 test:
