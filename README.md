@@ -3,7 +3,7 @@ prerequisites :
 1) Entrez Direct: E-utilities on the Unix Command Line
 https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
-sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
+    sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 
 2) python,awk
 
