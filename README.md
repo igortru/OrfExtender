@@ -38,3 +38,6 @@ test:
 
     awk '{printf "echo %s;./scripts/ExtendDownStream.sh %s 200\n",$1,$1;}' ./tests/test.set  | sh
 
+        NCBI Entrez Utilities (Eutils) requests can sometimes time out. 
+        If this happens, simply re-run your script.
+
