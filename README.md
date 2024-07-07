@@ -36,5 +36,5 @@ use:
 
 test:
 
-    awk '{printf "echo %s;./scripts/ExtendDownStream.sh %s 200 U\n",$1,$1;}' ./tests/test.set  | sh
+    awk '{printf "echo %s;./scripts/ExtendDownStream.sh %s 200\n",$1,$1;}' ./tests/test.set  | sh
 
