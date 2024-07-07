@@ -1,5 +1,5 @@
 For any given genbank protein accession, if it linked with nucleotide where protein was annotated
-allow extend orf upstream and downstream.
+allow extend orf upstream and downstream until alternative stop codons
 
 use-cases:
 
