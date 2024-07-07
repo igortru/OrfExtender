@@ -1,5 +1,6 @@
 For any given genbank protein accession, if it linked with nucleotide where protein was annotated
-allow extend orf upstream and downstream until alternative stop codons
+allow extend orf upstream and downstream until alternative stop codons. Allow easily validated annotated in genbank proteins
+suspicious in premature stop-codons.
 
 use-cases:
 
