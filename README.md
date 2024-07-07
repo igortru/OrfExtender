@@ -1,6 +1,9 @@
-for any given genbank protein accession if it linked with nucleotide where protein was annotated
-allow extend upstream and downstream selenoproteins replacing  "TGA" * with "U"
-and proteins (mostly phages, annotated with genetic code 11) with genetic code 15   "TGA" * -> "Q"
+For any given genbank protein accession, if it linked with nucleotide where protein was annotated
+allow extend orf upstream and downstream.
+use-cases:
+        selenoproteins : replace  "TGA" * with "U"
+        proteins (mostly phages, annotated with genetic code 11) with genetic code 15 :  "TGA" * -> "Q"
+
 prerequisites :
 
 1) Entrez Direct: E-utilities on the Unix Command Line https://www.ncbi.nlm.nih.gov/books/NBK179288/
