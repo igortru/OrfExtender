@@ -1,7 +1,8 @@
 script_name=$0
 script_full_path=$(dirname "$0")
 temp_dir=$(mktemp -d)
-L=$4
+AA="Q"
+L=$3
 if [ -z "$L" ]
 then
        L="2"
@@ -18,5 +19,5 @@ else
     P=$(head -n $(wc -l < $temp_dir/tmp) $temp_dir/tmp | tail -n +1 | egrep "TAA|TGA" | tail -1 | awk  '{ printf "%d\n",$1; }')
 fi
 R=$(cat $temp_dir/tmp | tail -1 | awk  '{ printf "%d\n",$1; }')
-$script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $3
+$script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $AA 
 rm -rf $temp_dir

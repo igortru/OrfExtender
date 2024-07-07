@@ -22,18 +22,17 @@ setup:
 
 use:
 
-    ./scripts/ExtendDownStream.sh acc max_len letter row
+    ./scripts/ExtendDownStream.sh acc max_len  - selenoprotein
+    ./scripts/ExtendDownStream15.sh acc max_len - phage protein
 
     acc - genbank protein accession
-    max_len  - max number of AA can be added downstream,  try = 100-200
-    letter - replace "*" with "U"
-    row - row number from NCBI ipg report , default = 2
+    max_len  - max number of AA will be added downstream,  try = 100-200
 
-    ./scripts/ExtendUpStream.sh  acc max_len letter count
+    ./scripts/ExtendUpStream.sh  acc max_len - selenoprotein
+    ./scripts/ExtendUpStream15.sh  acc max_len  - phage protein
 
     acc - genbank protein accession
-    max_len  - max number of AA can be added upstream, try = 100-200
-    row - row number from NCBI ipg report , default = 2
+    max_len  - max number of AA will be added upstream, try = 100-200
 
 test:
 

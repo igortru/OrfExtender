@@ -2,7 +2,8 @@ script_name=$0
 script_full_path=$(dirname "$0")
 temp_dir=$(mktemp -d)
 
-L=$4
+AA="U"
+L=$3
 if [ -z "$L" ]
 then
        L="2" 
@@ -14,5 +15,5 @@ then
         echo "non-TGA stop codon missing\nadd downstream length" 
 	P=$(cat $temp_dir/tmp | wc -l)
 fi
-$script_full_path/GenerateDown.sh $temp_dir/tmp $P $3
+$script_full_path/GenerateDown.sh $temp_dir/tmp $P $AA
 rm -rf $temp_dir
