@@ -1,5 +1,6 @@
 For any given genbank protein accession, if it linked with nucleotide where protein was annotated
 allow extend orf upstream and downstream.
+
 use-cases:
         selenoproteins : replace  "TGA" * with "U"
         proteins (mostly phages, annotated with genetic code 11) with genetic code 15 :  "TGA" * -> "Q"
