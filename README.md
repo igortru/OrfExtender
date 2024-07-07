@@ -3,7 +3,7 @@ allow extend orf upstream and downstream until alternative stop codons
 
 use-cases:
 
-        selenoproteins : replace  "TGA" * with "U"
+        selenoproteins : replace  "TGA" * -> "U"
         proteins (mostly phages, annotated with genetic code 11) with genetic code 15 :  "TGA" * -> "Q"
 
 prerequisites :
