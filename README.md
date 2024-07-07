@@ -2,16 +2,17 @@ For any given genbank protein accession, if it linked with nucleotide where prot
 allow extend orf upstream and downstream.
 
 use-cases:
+
         selenoproteins : replace  "TGA" * with "U"
         proteins (mostly phages, annotated with genetic code 11) with genetic code 15 :  "TGA" * -> "Q"
 
 prerequisites :
 
-1) Entrez Direct: E-utilities on the Unix Command Line https://www.ncbi.nlm.nih.gov/books/NBK179288/
+        Entrez Direct: E-utilities on the Unix Command Line https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
         sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 
-2) python,awk
+        python,awk
 
 setup: 
       add +x to scripts
