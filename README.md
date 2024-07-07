@@ -1,6 +1,4 @@
-For any given genbank protein accession, if it linked with nucleotide where protein was annotated
-allow extend orf upstream and downstream until alternative stop codons. Allow easily validated annotated in genbank proteins
-suspicious in premature stop-codons.
+Given a GenBank protein accession, if it's linked to the nucleotide sequence where the protein was annotated, we can extend the open reading frame (ORF) upstream and downstream to search for alternative stop codons. This allows for easier validation of annotated GenBank proteins suspected to have premature stop codons
 
 use-cases:
 
