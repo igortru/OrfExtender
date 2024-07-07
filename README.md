@@ -35,9 +35,9 @@ use:
 
 test:
 
- cd tests 
- ./test.sh
-result will be in test.result
+        cd tests 
+         ./test.sh
+        result will be in test.result
 
         NCBI Entrez Utilities (Eutils) requests can sometimes time out. 
         If this happens, simply re-run your script.
