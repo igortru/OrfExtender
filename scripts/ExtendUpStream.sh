@@ -13,9 +13,10 @@ R=$(cat $temp_dir/tmp | egrep "TAA|TAG" | wc -l)
 if [ "$R" -eq "0" ] 
 then
         echo "no upstream stop codons"
+        P="1"
 else
     P=$(head -n $(wc -l < $temp_dir/tmp) $temp_dir/tmp | tail -n +1 | egrep "TAA|TAG" | tail -1 | awk  '{ printf "%d\n",$1; }')
-    R=$(cat $temp_dir/tmp | tail -1 | awk  '{ printf "%d\n",$1; }')
-    $script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $3
-fi  
+fi
+R=$(cat $temp_dir/tmp | tail -1 | awk  '{ printf "%d\n",$1; }')
+$script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $3
 rm -rf $temp_dir
