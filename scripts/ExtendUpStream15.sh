@@ -19,7 +19,5 @@ else
     P=$(cat $temp_dir/tmp | sed '$d' | egrep "TAA|TGA" | tail -1 | awk  '{ printf "%d\n",$1; }')
 fi
 R=$(cat $temp_dir/tmp | tail -1 | awk  '{ printf "%d\n",$1; }')
-echo $P 
-echo $R
 $script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $AA 
 rm -rf $temp_dir
