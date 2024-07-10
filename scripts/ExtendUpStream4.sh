@@ -17,6 +17,10 @@ then
         P="1"
 else
     P=$(cat $temp_dir/tmp | sed '$d' | egrep "TAA|TAG" | tail -1 | awk  '{ printf "%d\n",$1; }')
+    if [ -z "$P" ]
+    then
+        P=$2
+    fi
 fi
 R=$(cat $temp_dir/tmp | tail -1 | awk  '{ printf "%d\n",$1; }')
 $script_full_path/GenerateUp.sh $temp_dir/tmp $P $R $AA
