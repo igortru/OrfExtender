@@ -39,7 +39,8 @@ use:
 
 test:
 
-	example taken from
+	1)
+	taken from
 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10769273/
 	"Predicting stop codon reassignment improves functional annotation of bacteriophages"
 	MG676224	Aeromonas phage AhSzq-1 Shenzhenvirus Demerecviridae
@@ -50,6 +51,7 @@ test:
 	original sequence
 	efetch -id AVR76017 -format fasta -db protein
 
+	2)
         cd tests 
          ./test.sh
         result will be in test.result
