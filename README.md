@@ -1,4 +1,5 @@
-Given a GenBank protein accession, if it's linked to the nucleotide sequence where the protein was annotated, tool extend the open reading frame (ORF) upstream and downstream to search for alternative stop codons. This allows for easier validation of annotated GenBank proteins suspected to have premature stop codons
+Given a GenBank protein accession, if it's linked to the nucleotide sequence where the protein was annotated, tool can extend corresponding the open reading frame (ORF) upstream or downstream to search for alternative stop codons and provide extended protein sequence.
+This allows for easier validation of annotated GenBank proteins suspected to have premature stop codons
 
 use-cases:
 
@@ -25,13 +26,13 @@ use:
     ./scripts/ExtendDownStream15.sh acc max_len - phage protein
 
     acc - genbank protein accession
-    max_len  - max number of AA will be added downstream,  try = 100-200
+    max_len  - max number of AA will be added downstream,  try = 100..200..1000
 
     ./scripts/ExtendUpStream.sh  acc max_len - selenoprotein
     ./scripts/ExtendUpStream15.sh  acc max_len  - phage protein
 
     acc - genbank protein accession
-    max_len  - max number of AA will be added upstream, try = 100-200
+    max_len  - max number of AA will be added upstream, try = 100..200..1000
 
 test:
 
