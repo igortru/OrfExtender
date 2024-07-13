@@ -6,6 +6,7 @@ use-cases:
         selenoproteins : replace  "TGA" * -> "U"
         proteins (mostly phages, annotated with genetic code 11) with genetic code 15 :  "TAG" * -> "Q"
         proteins (mostly phages, annotated with genetic code 11) with genetic code 4 :   "TGA" * -> "W"
+        proteins check alternative start upstream 
 
 prerequisites :
 
@@ -23,14 +24,15 @@ setup:
 
 use:
 
-    ./scripts/ExtendDownStream.sh acc max_len  - selenoprotein
+    ./scripts/ExtendDownStreamU.sh acc max_len  - selenoprotein
     ./scripts/ExtendDownStream15.sh acc max_len - phage protein
     ./scripts/ExtendDownStream4.sh acc max_len - phage protein
 
     acc - genbank protein accession
     max_len  - max number of AA will be added downstream,  try = 100..200..1000
 
-    ./scripts/ExtendUpStream.sh  acc max_len - selenoprotein
+    ./scripts/ExtendUpStream.sh  acc max_len - move protein start upstream until stop codon 
+    ./scripts/ExtendUpStreamU.sh  acc max_len - selenoprotein
     ./scripts/ExtendUpStream15.sh  acc max_len  - phage protein
     ./scripts/ExtendUpStream4.sh  acc max_len  - phage protein
 
