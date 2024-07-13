@@ -55,6 +55,8 @@ def translate_codon(codon):
     protein = None
     if len(codon) == 3 and codon in DNA_CODON:
         protein = DNA_CODON[codon]
+    else :
+        protein = "X"
     return protein
 
 # generate sub_seqs according to start codons
