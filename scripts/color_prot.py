@@ -25,5 +25,4 @@ with open(sys.argv[1], "r") as file:
   seqs.append(seq)
   
 up = len(seqs[0]) - len(seqs[2])
-down = len(seqs[1]) - len(seqs[2])
-print(f"{accs[0]} {accs[2][1:]}\n{RED}{seqs[0][0:up]}{RESET}{seqs[1][down:]}{GREEN}{seqs[1][len(seqs[2]):]}{RESET}")
+print(f"{accs[0]} {accs[2][1:]}\n{RED}{seqs[0][0:up]}{RESET}{seqs[0][up:]}{GREEN}{seqs[1][len(seqs[2]):]}{RESET}")
