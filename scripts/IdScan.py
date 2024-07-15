@@ -6,19 +6,19 @@ ssels = [d.rstrip() for d in sels]
 for s in ssels:
         arr = s.split("\t")
         loc = (arr[1], arr[2], "plus","+") if int(arr[1]) < int(arr[2]) else (arr[2], arr[1], "minus","-")
-        command = ["efetch","-id",arr[0],"-db","nucleotide","-format","docsum"]
+        command = ["efetch","-id",arr[0],"-db","nuccore","-format","fasta"]
         result = subprocess.run(command, capture_output=True, text=True)
         f = result.stdout.split("\n")
         slen = 0
         for s in f:
-           if s.find("<Slen>") > 0:
-              slen = int(s.split(">")[1].split("<")[0])       
+           if ">" not in s:
+              slen = slen + len(s.rstrip())
         sfrom = int(loc[0])
         sto = int(loc[1])
         while sfrom <= 0:
            sfrom = sfrom + 3
-#        while sto > slen:
-#           sto = sto - 3       
+        while sto > slen:
+           sto = sto - 3       
         loc = (str(sfrom),str(sto),loc[2],loc[3])
 
         command = ["efetch",
