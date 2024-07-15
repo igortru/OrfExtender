@@ -15,11 +15,11 @@ for s in ssels:
               slen = int(s.split(">")[1].split("<")[0])       
         sfrom = int(loc[0])
         sto = int(loc[1])
-#        while sfrom <= 0:
-#           sfrom = sfrom + 3
+        while sfrom <= 0:
+           sfrom = sfrom + 3
 #        while sto > slen:
 #           sto = sto - 3       
-#        loc = (str(sfrom),str(sto),loc[2],loc[3])
+        loc = (str(sfrom),str(sto),loc[2],loc[3])
 
         command = ["efetch",
                    "-id", arr[0] , "-db", "nucleotide", "-format", "fasta" ,"-seq_start",loc[0], "-seq_stop", loc[1], "-strand", loc[2]]
