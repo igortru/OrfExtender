@@ -23,21 +23,24 @@ setup:
       ./setup.sh
 
 use:
+    efetch -db ipg -id acc
+    report nucleotide accession with location where protein found
 
-    ./scripts/ExtendDownStreamU.sh acc max_len  - selenoprotein
-    ./scripts/ExtendDownStream15.sh acc max_len - phage protein
-    ./scripts/ExtendDownStream4.sh acc max_len - phage protein
+    ./scripts/ExtendDownStreamU.sh acc max_len ipgrow  - selenoprotein
+    ./scripts/ExtendDownStream15.sh acc max_len ipgrow  - phage protein
+    ./scripts/ExtendDownStream4.sh acc max_len ipgrow - phage protein
 
     acc - genbank protein accession
     max_len  - max number of AA will be added downstream,  try = 100..200..1000
 
-    ./scripts/ExtendUpStream.sh  acc max_len - move protein start upstream until stop codon 
-    ./scripts/ExtendUpStreamU.sh  acc max_len - selenoprotein
-    ./scripts/ExtendUpStream15.sh  acc max_len  - phage protein
-    ./scripts/ExtendUpStream4.sh  acc max_len  - phage protein
+    ./scripts/ExtendUpStream.sh  acc max_len ipgrow - move protein start upstream until stop codon 
+    ./scripts/ExtendUpStreamU.sh  acc max_len ipgrow - selenoprotein
+    ./scripts/ExtendUpStream15.sh  acc max_len ipgrow - phage protein
+    ./scripts/ExtendUpStream4.sh  acc max_len  ipgrow - phage protein
 
     acc - genbank protein accession
     max_len  - max number of AA will be added upstream, try = 100..200..1000
+    ipgrow = row number from ipg report , default = 2
 
 test:
 
